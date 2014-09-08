@@ -48,9 +48,8 @@
 <link rel="shortcut icon" href="/favicon.png" />
 <link rel="canonical" href="https://shaaaaaaaaaaaaa.com<%= req.originalUrl %>" />
 
-<link href="https://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,700|Average" rel="stylesheet" type="text/css" />
-<link rel="stylesheet" href="/css/pure-min-0.5.0.css" />
-<link rel="stylesheet" href="/css/main.css?<%= Date.now() %>" />
+<link href='http://fonts.googleapis.com/css?family=Montserrat+Alternates:700|Monda:400,700|Changa+One' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="/css/screen.css?<%= Date.now() %>" />
 
 <script src="/js/jquery-2.1.1.min.js"></script>
 
@@ -59,195 +58,220 @@
 
 <div id="main">
 
-  <h1>SHAAAAAAAAAAAAA</h1>
+  
 
   <header>
-    <p>
-      Check your site for weak SHA-1 certificates. <a href="https://github.com/konklone/shaaaaaaaaaaaaa">Open source</a>, by <a href="https://twitter.com/konklone">@konklone</a>.
-    </p>
+ 	 <h1>shaaaaaaaaaaaaa <span>that's 13 a's!</span></h1>
+      <h2>Check your site for weak SHA-1 certificates.</h2>
+      
+      <div id="results">
+          <div class="result form">
+            <form action="#" method="get">
+              <input pattern="[\w\-\.]+" type="text" id="domain" name="domain" placeholder="yourdomain.com" />
+              <input type="submit" class="submit-button" value="Check &rarr;" />
+      
+              <span id="loading">
+                If it hangs, <a href="#" class="start-over">start over</a>.
+              </span>
+      
+            </form>
+          </div>
+      
+          <div class="result answer">
+      
+            <h4 class="good">Nice.</h4>
+            <h4 class="almost">Almost.</h4>
+            <h4 class="bad">Dang.</h4>
+            
+            
+            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" x="0" y="0" width="162.6" height="162.6" viewBox="0 0 162.6 162.6" enable-background="new 0 0 162.59 162.59" xml:space="preserve" class="good"><circle fill="none" stroke="#000000" stroke-width="6" stroke-miterlimit="10" cx="81.3" cy="81.3" r="78.3"/><path fill="#FFFFFF" stroke="#000000" stroke-width="6" stroke-linecap="round" stroke-miterlimit="10" d="M109.7 118c-1.4 0.9-2.9 1.7-4.4 2.4 -7.1 3.4-15.1 5.4-23.6 5.4 -10.5 0-20.4-3-28.7-8.2"/><circle cx="46.8" cy="93.2" r="8.3"/><circle cx="115.8" cy="93.2" r="8.3"/></svg>
+            
+             <svg version="1.1" xmlns="http://www.w3.org/2000/svg" x="0" y="0" width="162.6" height="162.6" viewBox="0 0 162.6 162.6" enable-background="new 0 0 162.59 162.59" xml:space="preserve" class="almost"><circle fill="none" stroke="#000000" stroke-width="6" stroke-miterlimit="10" cx="81" cy="81.5" r="78.3"/><circle cx="46.5" cy="93.4" r="8.3"/><circle cx="115.5" cy="93.4" r="8.3"/><line fill="#FFFFFF" stroke="#000000" stroke-width="6" stroke-linecap="round" stroke-miterlimit="10" x1="53.3" y1="121.8" x2="109.3" y2="121.8"/></svg>
+            
+            
+            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" x="0" y="0" width="162.6" height="162.6" viewBox="0 0 162.6 162.6" enable-background="new 0 0 162.59 162.59" xml:space="preserve" class="bad"><circle fill="none" stroke="#000000" stroke-width="6" stroke-miterlimit="10" cx="81.3" cy="81.3" r="78.3"/><path fill="#FFFFFF" stroke="#000000" stroke-width="6" stroke-linecap="round" stroke-miterlimit="10" d="M52.9 125.3c1.4-0.9 2.9-1.7 4.4-2.4 7.1-3.4 15.1-5.4 23.6-5.4 10.5 0 20.4 3 28.7 8.2"/><line fill="none" stroke="#000000" stroke-width="6" stroke-linecap="round" stroke-miterlimit="10" x1="41.7" y1="85.5" x2="56.7" y2="100.4"/><line fill="none" stroke="#000000" stroke-width="6" stroke-linecap="round" stroke-miterlimit="10" x1="56.7" y1="85.5" x2="41.7" y2="100.4"/><line fill="none" stroke="#000000" stroke-width="6" stroke-linecap="round" stroke-miterlimit="10" x1="105.3" y1="85.5" x2="120.3" y2="100.4"/><line fill="none" stroke="#000000" stroke-width="6" stroke-linecap="round" stroke-miterlimit="10" x1="120.3" y1="85.5" x2="105.3" y2="100.4"/></svg>
+            
+            
+            
+            
+      
+            <p class="details good">
+              <span class="domain"></span> has a full certificate chain signed with <span class="algorithm"></span><span id="sha"> and is undoubtedly the most magnificent website in the world</span>.
+            </p>
+      
+            <p class="details almost">
+              <span class="domain"></span> has a <span class="algorithm"></span> certificate, but needs to <a href="#sha2-intermediate">update its intermediates</a>.
+            </p>
+      
+            <p class="details bad">
+              <span class="domain"></span> is using <span class="algorithm"></span>. Time for a new certificate using SHA-2.
+            </p>
+      
+            <!-- <ul class="data">
+              <h5>Certificate details</h5>
+              <li>
+                <span class="cert">Client:</span>
+                <span class="algorithm">SHA-2</span>,
+                <span class="name">twitter.com</span>
+              </li>
+              <li>
+                <span class="cert">Intermediate:</span>
+                <span class="algorithm">SHA-1</span>,
+                <span class="name">VeriSign Class 3 Extended Validation SSL CA</span>
+              </li>
+      
+            </ul> -->
+      
+            <p>
+              See the details at <a class="ssllabs" href="#">SSL Labs</a>, or <a href="#" class="start-over">start over</a>.
+            </p>
+          </div>
+      
+          <div class="result error">
+            <h4 class="word error">Argh.</h4>
+            
+            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" x="0" y="0" width="162.6" height="162.6" viewBox="0 0 162.6 162.6" enable-background="new 0 0 162.59 162.59" xml:space="preserve"><circle fill="none" stroke="#000000" stroke-width="6" stroke-miterlimit="10" cx="81.3" cy="81.3" r="78.3"/><path fill="#FFFFFF" stroke="#000000" stroke-width="6" stroke-linecap="round" stroke-miterlimit="10" d="M52.9 125.3c1.4-0.9 2.9-1.7 4.4-2.4 7.1-3.4 15.1-5.4 23.6-5.4 10.5 0 20.4 3 28.7 8.2"/><line fill="none" stroke="#000000" stroke-width="6" stroke-linecap="round" stroke-miterlimit="10" x1="41.7" y1="85.5" x2="56.7" y2="100.4"/><line fill="none" stroke="#000000" stroke-width="6" stroke-linecap="round" stroke-miterlimit="10" x1="56.7" y1="85.5" x2="41.7" y2="100.4"/><line fill="none" stroke="#000000" stroke-width="6" stroke-linecap="round" stroke-miterlimit="10" x1="105.3" y1="85.5" x2="120.3" y2="100.4"/><line fill="none" stroke="#000000" stroke-width="6" stroke-linecap="round" stroke-miterlimit="10" x1="120.3" y1="85.5" x2="105.3" y2="100.4"/></svg>
+      
+            <p class="error">
+              There was an error checking <span class="domain"></span>.
+            </p>
+      
+            <p>
+              <a href="#" class="start-over">Start over.</a>
+            </p>
+          </div>
+        </div>
   </header>
 
-  <div id="results">
-    <div class="result form">
-      <form action="#" class="pure-form" method="get">
-        <input pattern="[\w\-\.]+" id="domain" name="domain" placeholder="yourdomain.com" />
-        <input type="submit" class="pure-button pure-button-primary" value="Go" />
 
-        <span class="inline-block" id="loading">
-          If it hangs, <a href="#" class="start-over">start over</a>.
-        </span>
+	<section>
+	 
+	 	<h3>Why?
 
-      </form>
-    </div>
+		    <p>
+		      Your SSL certificate was signed using a hashing function &mdash; probably SHA-1.
+		    </p>
+		
+		    <p>
+		      Which is too bad, because <strong>SHA-1 is <a href="http://arstechnica.com/security/2012/10/sha1-crypto-algorithm-could-fall-by-2018/">becoming dangerously weak</a></strong>. It's time to <strong>upgrade to SHA-2</strong>.
+		    </p>
+	    </h3>
+	
+	  <p>
+	    SHA-1 was <a href="https://www.schneier.com/blog/archives/2005/02/sha1_broken.html">first shown to be broken in 2005</a>, and one estimate suggests that in 2014 <a href="https://www.schneier.com/blog/archives/2012/10/when_will_we_se.html">it costs $1-2 million</a> to forge a SHA-1 certificate. For some actors, that's nothing.
+	  </p>
+	
+	  <p>
+	    The only way to solve this is for everyone to turn off support for SHA-1. <a href="http://news.netcraft.com/archives/2014/05/05/sha-2-very-cryptographic-so-secure-such-growth-wow.html">That curve is bending</a>, but there's a long way to go.
+	  </p>
+	  <p>
+	    <a href="http://arstechnica.com/security/2013/11/hoping-to-avert-collision-with-disaster-microsoft-retires-sha1/">Microsoft</a>, <a href="http://googleonlinesecurity.blogspot.com/2014/09/gradually-sunsetting-sha-1.html">Chrome</a>, and <a href="https://wiki.mozilla.org/CA:Problematic_Practices#SHA-1_Certificates">Firefox</a> all recently deprecated SHA-1, and plan to turn it off in 2017.
+	  </p>
+	
+	  <p>
+	    In fact, Chrome will <a href="http://googleonlinesecurity.blogspot.com/2014/09/gradually-sunsetting-sha-1.html">start showing warnings</a> over the <strong>next few months</strong> for any site using a SHA-1 certificate that expires in 2017.
+	  </p>
+	
+	  <p>
+	    <a target="_blank" href="http://googleonlinesecurity.blogspot.com/2014/09/gradually-sunsetting-sha-1.html"><img src="/chrome-warnings.png" style="display: block; border: 1px solid #eee; margin: 0 auto" /></a>
+	  </p>
+	
+	  <p>
+	    It's worth taking the time to get off SHA-1. Read <a href="https://konklone.com/post/why-google-is-hurrying-the-web-to-kill-sha-1">more about how SHA-1 works and why this is happening</a>.
+	  </p>
+  
+  </section> 
 
-    <div class="result answer">
+  <section>
+	  <h3>
+	    <a name="sha2-certificate" href="#sha2-certificate"></a>
+	    Getting a SHA-2 certificate
+	  </h3>
+	
+	  <p>
+	    It's usually very simple. You'll need to <a href="https://konklone.com/post/switch-to-https-now-for-free#generating-the-certificate">generate a new certificate request</a> that asks your CA to use SHA-2.
+	  </p>
+	
+	  <p>
+	    <code>openssl req -new <strong>-sha256</strong> -key your-private.key -out your-domain.csr</code>
+	  </p>
+	
+	  <p>
+	    If you use:
+	  </p>
+	
+	  <ul>
+	    <li>
+	      <strong><a href="https://www.namecheap.com/security/ssl-certificates/domain-validation.aspx">Namecheap</a></strong>, choose a Comodo cert, because some of the others <a href="https://github.com/konklone/shaaaaaaaaaaaaa/issues/24#issuecomment-53441453">may not obey your SHA-2 request</a> unless you spend time with customer support.
+	    </li>
+	    <li>
+	      <strong><a href="https://www.godaddy.com/ssl/ssl-certificates.aspx">GoDaddy</a></strong>, they <a href="https://github.com/konklone/shaaaaaaaaaaaaa/issues/24#issuecomment-53438159">may still issue you a SHA-1 cert</a> at first. If so, you need to <a href="http://support.godaddy.com/help/article/4976/re-keying-an-ssl-certificate?locale=en">"re-key" your certificate</a> to get one signed with SHA-2.
+	    </li>
+	    <li>
+	      <strong><a href="https://www.startssl.com">StartSSL</a></strong> and have many certificates, you may find <a href="https://kuix.de/blog/index.php?entry=SSL/TLS-servers,-SHA-1/SHA-256-and-StartSSL.com-certificates">Kai Engert's trick</a> of using a fake subdomain to avoid revocation fees helpful. (Requires a paid class 2 identity verification.)
+	    </li>
+	    <li>
+	      <strong><a href="https://products.geotrust.com/orders/orderinformation/authentication.do">GeoTrust or RapidSSL</a></strong> and they mistakenly issue you a SHA-1 again, follow <a href="https://github.com/konklone/shaaaaaaaaaaaaa/issues/24#issuecomment-54021941">these instructions</a> to login to their portal and reissue your certificate.
+	    </li>
+	    <li>
+	      <strong><a href="http://www.gandi.net/support/contact/mail/">Gandi</a></strong>, they <a href="https://twitter.com/gandibar/status/508001036653826049">don't support SHA-2 yet</a>. They encourage people to <a href="https://www.gandi.net/domain/wishlist/">vote it up</a> on their wishlist, but you should also <a href="https://twitter.com/gandibar">poke them on Twitter</a> about it.
+	    </li>
+	  </ul>
+	
+	  <p>
+	    If you find other problems, please <a href="https://github.com/konklone/shaaaaaaaaaaaaa/issues/24">report them here</a> and I'll update the list above.
+	  </p>
+  
+  </section>
 
-      <strong class="word good">Nice.</strong>
-      <strong class="word almost">Almost.</strong>
-      <strong class="word bad">Dang.</strong>
 
-      <p class="details good">
-        <span class="domain"></span> has a full certificate chain signed with <span class="algorithm"></span><span id="sha"> and is undoubtedly the most magnificent website in the world</span>.
-      </p>
+  <section>
+  
+	  <h3>
+	    <a name="sha2-intermediate" href="#sha2-intermediate"></a>
+	    Using SHA-2 intermediate certificates
+	  </h3>
+	
+	  <p>
+	    When you created your certificate chain, you included one or more <a href="http://www.whichssl.com/intermediate_certificates2.html">intermediate certificates</a> from wherever you bought your cert, which may need to be updated. Check <a class="ssllabs" href="https://www.ssllabs.com/ssltest/analyze.html">SSL Labs</a> to see if you need to update.
+	  </p>
+	
+	  <p>
+	    If you use:
+	  </p>
+	
+	  <ul>
+	    <li>
+	      <strong><a href="https://www.startssl.com">StartSSL</a></strong>, download their updated SHA-2 certificates for whatever level you've paid for: <a href="https://www.startssl.com/certs/class1/sha2/pem/sub.class1.server.sha2.ca.pem">Class 1</a>, <a href="https://www.startssl.com/certs/class2/sha2/pem/sub.class2.server.sha2.ca.pem">Class 2</a>, <a href="https://www.startssl.com/certs/class3/sha2/pem/sub.class3.server.sha2.ca.pem">Class 3</a>, or <a href="https://www.startssl.com/certs/class4/sha2/pem/sub.ev.server.sha2.ca.pem">Class 4</a>.
+	    </li>
+	
+	    <li>
+	      <strong><a href="https://knowledge.verisign.com/support/ssl-certificates-support/index?page=content&id=AR657&actp=LIST&viewlocale=en_US">Verisign / Symantec</a></strong>, their SHA-2 intermediates are listed under <strong>RSA SHA-2</strong>, at "SHA-2 Intermediate CAs under SHA-2 Root".
+	    </li>
+	
+	    <li>
+	      <strong><a href="https://knowledge.geotrust.com/support/knowledge-base/index?page=content&id=AR1421&actp=LIST&viewlocale=en_US">GeoTrust</a></strong>, their SHA-2 intermediates are listed under <strong>RSA SHA-2</strong>, at "SHA-2 Intermediate CAs under SHA-2 Root".
+	    </li>
+	
+	    <li>
+	      <strong><a href="https://www.digicert.com/ssl-certificate.htm">Digicert</a></strong>, they have <a href="https://www.digicert.com/digicert-root-certificates.htm#intermediates">SHA-2 intermediates</a> for everything.
+	    </li>
+	  </ul>
+  </section>
 
-      <p class="details almost">
-        <span class="domain"></span> has a <span class="algorithm"></span> certificate, but needs to <a href="#sha2-intermediate">update its intermediates</a>.
-      </p>
-
-      <p class="details bad">
-        <span class="domain"></span> is using <span class="algorithm"></span>. Time for a new certificate using SHA-2.
-      </p>
-
-      <!-- <ul class="data">
-        <h5>Certificate details</h5>
-        <li>
-          <span class="cert">Client:</span>
-          <span class="algorithm">SHA-2</span>,
-          <span class="name">twitter.com</span>
-        </li>
-        <li>
-          <span class="cert">Intermediate:</span>
-          <span class="algorithm">SHA-1</span>,
-          <span class="name">VeriSign Class 3 Extended Validation SSL CA</span>
-        </li>
-
-      </ul> -->
-
-      <p>
-        See the details at <a class="ssllabs" href="#">SSL Labs</a>, or <a href="#" class="start-over">start over</a>.
-      </p>
-    </div>
-
-    <div class="result error">
-      <strong class="word error">Argh.</strong>
-
-      <p class="error">
-        There was an error checking <span class="domain"></span>.
-      </p>
-
-      <p>
-        <a href="#" class="start-over">Start over.</a>
-      </p>
-    </div>
-  </div>
-
-  <div class="lead">
-    <p>
-      Your SSL certificate was signed using a hashing function &mdash; probably SHA-1.
-    </p>
-
-    <p>
-      Which is too bad, because <strong>SHA-1 is <a href="http://arstechnica.com/security/2012/10/sha1-crypto-algorithm-could-fall-by-2018/">becoming dangerously weak</a></strong>. It's time to <strong>upgrade to SHA-2</strong>.
-    </p>
-  </div>
-
-  <p>
-    SHA-1 was <a href="https://www.schneier.com/blog/archives/2005/02/sha1_broken.html">first shown to be broken in 2005</a>, and one estimate suggests that in 2014 <a href="https://www.schneier.com/blog/archives/2012/10/when_will_we_se.html">it costs $1-2 million</a> to forge a SHA-1 certificate. For some actors, that's nothing.
-  </p>
-
-  <p>
-    The only way to solve this is for everyone to turn off support for SHA-1. <a href="http://news.netcraft.com/archives/2014/05/05/sha-2-very-cryptographic-so-secure-such-growth-wow.html">That curve is bending</a>, but there's a long way to go.
-  </p>
-  <p>
-    <a href="http://arstechnica.com/security/2013/11/hoping-to-avert-collision-with-disaster-microsoft-retires-sha1/">Microsoft</a>, <a href="http://googleonlinesecurity.blogspot.com/2014/09/gradually-sunsetting-sha-1.html">Chrome</a>, and <a href="https://wiki.mozilla.org/CA:Problematic_Practices#SHA-1_Certificates">Firefox</a> all recently deprecated SHA-1, and plan to turn it off in 2017.
-  </p>
-
-  <p>
-    In fact, Chrome will <a href="http://googleonlinesecurity.blogspot.com/2014/09/gradually-sunsetting-sha-1.html">start showing warnings</a> over the <strong>next few months</strong> for any site using a SHA-1 certificate that expires in 2017.
-  </p>
-
-  <p>
-    <a target="_blank" href="http://googleonlinesecurity.blogspot.com/2014/09/gradually-sunsetting-sha-1.html"><img src="/chrome-warnings.png" style="display: block; border: 1px solid #eee; margin: 0 auto" /></a>
-  </p>
-
-  <p>
-    It's worth taking the time to get off SHA-1. Read <a href="https://konklone.com/post/why-google-is-hurrying-the-web-to-kill-sha-1">more about how SHA-1 works and why this is happening</a>.
-  </p>
-
-  <h2>
-    <a name="sha2-certificate" href="#sha2-certificate"></a>
-    Getting a SHA-2 certificate
-  </h2>
-
-  <p>
-    It's usually very simple. You'll need to <a href="https://konklone.com/post/switch-to-https-now-for-free#generating-the-certificate">generate a new certificate request</a> that asks your CA to use SHA-2.
-  </p>
-
-  <p>
-    <code>openssl req -new <strong>-sha256</strong> -key your-private.key -out your-domain.csr</code>
-  </p>
-
-  <p>
-    If you use:
-  </p>
-
-  <ul>
-    <li>
-      <strong><a href="https://www.namecheap.com/security/ssl-certificates/domain-validation.aspx">Namecheap</a></strong>, choose a Comodo cert, because some of the others <a href="https://github.com/konklone/shaaaaaaaaaaaaa/issues/24#issuecomment-53441453">may not obey your SHA-2 request</a> unless you spend time with customer support.
-    </li>
-    <li>
-      <strong><a href="https://www.godaddy.com/ssl/ssl-certificates.aspx">GoDaddy</a></strong>, they <a href="https://github.com/konklone/shaaaaaaaaaaaaa/issues/24#issuecomment-53438159">may still issue you a SHA-1 cert</a> at first. If so, you need to <a href="http://support.godaddy.com/help/article/4976/re-keying-an-ssl-certificate?locale=en">"re-key" your certificate</a> to get one signed with SHA-2.
-    </li>
-    <li>
-      <strong><a href="https://www.startssl.com">StartSSL</a></strong> and have many certificates, you may find <a href="https://kuix.de/blog/index.php?entry=SSL/TLS-servers,-SHA-1/SHA-256-and-StartSSL.com-certificates">Kai Engert's trick</a> of using a fake subdomain to avoid revocation fees helpful. (Requires a paid class 2 identity verification.)
-    </li>
-    <li>
-      <strong><a href="https://products.geotrust.com/orders/orderinformation/authentication.do">GeoTrust or RapidSSL</a></strong> and they mistakenly issue you a SHA-1 again, follow <a href="https://github.com/konklone/shaaaaaaaaaaaaa/issues/24#issuecomment-54021941">these instructions</a> to login to their portal and reissue your certificate.
-    </li>
-    <li>
-      <strong><a href="http://www.gandi.net/support/contact/mail/">Gandi</a></strong>, they <a href="https://twitter.com/gandibar/status/508001036653826049">don't support SHA-2 yet</a>. They encourage people to <a href="https://www.gandi.net/domain/wishlist/">vote it up</a> on their wishlist, but you should also <a href="https://twitter.com/gandibar">poke them on Twitter</a> about it.
-    </li>
-  </ul>
-
-  <p>
-    If you find other problems, please <a href="https://github.com/konklone/shaaaaaaaaaaaaa/issues/24">report them here</a> and I'll update the list above.
-  </p>
-
-  <h2>
-    <a name="sha2-intermediate" href="#sha2-intermediate"></a>
-    Using SHA-2 intermediate certificates
-  </h2>
-
-  <p>
-    When you created your certificate chain, you included one or more <a href="http://www.whichssl.com/intermediate_certificates2.html">intermediate certificates</a> from wherever you bought your cert, which may need to be updated. Check <a class="ssllabs" href="https://www.ssllabs.com/ssltest/analyze.html">SSL Labs</a> to see if you need to update.
-  </p>
-
-  <p>
-    If you use:
-  </p>
-
-  <ul>
-    <li>
-      <strong><a href="https://www.startssl.com">StartSSL</a></strong>, download their updated SHA-2 certificates for whatever level you've paid for: <a href="https://www.startssl.com/certs/class1/sha2/pem/sub.class1.server.sha2.ca.pem">Class 1</a>, <a href="https://www.startssl.com/certs/class2/sha2/pem/sub.class2.server.sha2.ca.pem">Class 2</a>, <a href="https://www.startssl.com/certs/class3/sha2/pem/sub.class3.server.sha2.ca.pem">Class 3</a>, or <a href="https://www.startssl.com/certs/class4/sha2/pem/sub.ev.server.sha2.ca.pem">Class 4</a>.
-    </li>
-
-    <li>
-      <strong><a href="https://knowledge.verisign.com/support/ssl-certificates-support/index?page=content&id=AR657&actp=LIST&viewlocale=en_US">Verisign / Symantec</a></strong>, their SHA-2 intermediates are listed under <strong>RSA SHA-2</strong>, at "SHA-2 Intermediate CAs under SHA-2 Root".
-    </li>
-
-    <li>
-      <strong><a href="https://knowledge.geotrust.com/support/knowledge-base/index?page=content&id=AR1421&actp=LIST&viewlocale=en_US">GeoTrust</a></strong>, their SHA-2 intermediates are listed under <strong>RSA SHA-2</strong>, at "SHA-2 Intermediate CAs under SHA-2 Root".
-    </li>
-
-    <li>
-      <strong><a href="https://www.digicert.com/ssl-certificate.htm">Digicert</a></strong>, they have <a href="https://www.digicert.com/digicert-root-certificates.htm#intermediates">SHA-2 intermediates</a> for everything.
-    </li>
-  </ul>
-
-  <h2>
+  <footer>
     <a name="credits" href="#credits"></a>
-    Credits
-  </h2>
 
   <p>
-    This website is an <a href="https://github.com/konklone/shaaaaaaaaaaaaa">open source</a> project, and includes a <a href="https://github.com/konklone/shaaaaaaaaaaaaa#command-line-version">command line tool</a> &mdash; please <a href="https://github.com/konklone/shaaaaaaaaaaaaa/issues">lend a hand</a>!
+    Created by <a href="https://twitter.com/konklone">@konklone</a> and designed by <a href="http://twitter.com/samm">@sammularczyk</a>. This website is an <a href="https://github.com/konklone/shaaaaaaaaaaaaa">open source</a> project, and includes a <a href="https://github.com/konklone/shaaaaaaaaaaaaa#command-line-version">command line tool</a> &mdash; please <a href="https://github.com/konklone/shaaaaaaaaaaaaa/issues">lend a hand</a>!
   </p>
 
   <p>
     Thanks to <a href="https://twitter.com/mathias">Mathias Bynens</a>, <a href="https://twitter.com/jmayer">Justin Mayer</a>, and <a href="https://twitter.com/jonnybarnes">Jonny Barnes</a> for inspiration and assistance.
   </p>
+  
+  </footer>
 
-</div>
 
 <script src="/js/main.js"></script>
 <script>
