@@ -126,7 +126,7 @@ var startOver = function() {
   console.log("Starting over.");
 
   hideLoading();
-  $("#results .result").removeClass('good, almost, bad').hide();
+  $("#results .result").removeClass('good').removeClass('almost').removeClass('bad').hide();
   $("#results .result.form").show();
   $("#domain").select().focus();
   $('header h2').show();
