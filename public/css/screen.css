@@ -197,12 +197,12 @@ body {
   max-width: 800px;
   padding: 0 2em;
   margin: 0 auto;
-  color: #3e4d52;
+  color: #455d65;
   background: #FFF;
 }
 
 strong, b {
-  color: #283235;
+  color: #304146;
 }
 
 a strong, a b, strong a, b a {
@@ -212,13 +212,16 @@ a strong, a b, strong a, b a {
 img {
   max-width: 100%;
   margin: 0 auto;
+  margin-top: 2em;
+  margin-bottom: 2em;
+  display: block;
 }
 
 a {
   color: #56B4D3;
   text-decoration: none;
   display: inline;
-  box-shadow: inset 0px -3px 0px rgba(66, 180, 101, 0.05);
+  box-shadow: inset 0px -2px 0px rgba(66, 180, 101, 0.05);
   -webkit-transition: all 0.5s ease-in-out 0s;
   -moz-transition: all 0.5s ease-in-out 0s;
   -ms-transition: all 0.5s ease-in-out 0s;
@@ -234,7 +237,7 @@ a {
   /* custom */
 }
 a:hover {
-  box-shadow: inset 0px -6px 0px rgba(66, 180, 101, 0.3);
+  box-shadow: inset 0px -5px 0px rgba(66, 180, 101, 0.3);
   color: #1e5d72;
 }
 
@@ -332,7 +335,7 @@ header span#loading {
   line-height: 2.25em;
   text-align: center;
   display: block;
-  color: #6a838c;
+  color: #71939e;
   width: 100%;
   position: absolute;
   bottom: -3em;
@@ -597,7 +600,7 @@ span#loading,
 footer {
   clear: both;
   display: block;
-  color: #6a838c;
+  color: #71939e;
   border-top: 1px solid #EEE;
   font-size: 0.88889em;
   line-height: 2.25em;

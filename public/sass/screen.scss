@@ -33,16 +33,19 @@ a strong, a b, strong a, b a {
 img {
 	max-width: 100%;
 	margin: 0 auto;
+	@include margin-leader(1);
+	@include margin-trailer(1);
+	display: block;
 }
 
 a {
 	color: $accent;
 	text-decoration: none;
 	display: inline;
-	box-shadow: inset 0px -3px 0px rgba(66, 180, 101,0.05);
+	box-shadow: inset 0px -2px 0px rgba(66, 180, 101,0.05);
 	@include transition(all, 0.5s);
 	&:hover {
-		box-shadow: inset 0px -6px 0px rgba(66, 180, 101,0.3);
+		box-shadow: inset 0px -5px 0px rgba(66, 180, 101,0.3);
 		color: darken($accent, 30%);
 	}
 }
