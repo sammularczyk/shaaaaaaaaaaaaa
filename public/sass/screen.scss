@@ -124,36 +124,23 @@ h1 {
 	cursor: default;
 	span {
 		font-family: "Monda", Helvetica, Arial, sans-serif;
-		background: #FAFAFA;
-		color: #AAA;
+		color: #DDD;
 		text-transform: uppercase;
 		font-weight: normal;
 		@include adjust-font-size-to(12px);
-		line-height: 1.1em;
-		display: block;
 		position: absolute;
-		top: -2.5em;
-		left: 2em;
-		@include transform(translateY(50px) scaleY(0.7) scaleX(0.5));
-		padding: 0.5em 1.25em;
-		border-radius: 1em;
+		bottom: -1em;
+		left: 0;
+		display: block;
+		@include transform(translateY(-1em) scale(0.9));
 		opacity: 0;
-		@include transition(all, 0.8s);
+		@include transition(all, 0.5s);
 		z-index: -1;
-		&:after {
-			content:'';
-			@include arrow(15px, 7px, down, #FAFAFA);
-			position: absolute;
-			bottom: -7px;
-			margin-left: -7.5px;
-			left: 50%;
-		}
+		line-height: 1em;
 	}
 	&:hover span {
 		opacity: 1;
-		@include transform(translateY(0) scaleY(1) scaleX(1));
-		-webkit-animation: bounceUp 1000ms linear both;
-		animation: bounceUp 1000ms linear both;
+		@include transform(translateY(0) scale(1));
 	}
 }
 

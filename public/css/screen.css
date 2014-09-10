@@ -390,29 +390,25 @@ h1 {
 }
 h1 span {
   font-family: "Monda", Helvetica, Arial, sans-serif;
-  background: #FAFAFA;
-  color: #AAA;
+  color: #DDD;
   text-transform: uppercase;
   font-weight: normal;
   font-size: 0.66667em;
   line-height: 3em;
-  line-height: 1.1em;
-  display: block;
   position: absolute;
-  top: -2.5em;
-  left: 2em;
-  -moz-transform: translateY(50px) scaleY(0.7) scaleX(0.5);
-  -ms-transform: translateY(50px) scaleY(0.7) scaleX(0.5);
-  -webkit-transform: translateY(50px) scaleY(0.7) scaleX(0.5);
-  transform: translateY(50px) scaleY(0.7) scaleX(0.5);
-  padding: 0.5em 1.25em;
-  border-radius: 1em;
+  bottom: -1em;
+  left: 0;
+  display: block;
+  -moz-transform: translateY(-1em) scale(0.9);
+  -ms-transform: translateY(-1em) scale(0.9);
+  -webkit-transform: translateY(-1em) scale(0.9);
+  transform: translateY(-1em) scale(0.9);
   opacity: 0;
-  -webkit-transition: all 0.8s ease-in-out 0s;
-  -moz-transition: all 0.8s ease-in-out 0s;
-  -ms-transition: all 0.8s ease-in-out 0s;
-  -o-transition: all 0.8s ease-in-out 0s;
-  transition: all 0.8s ease-in-out 0s;
+  -webkit-transition: all 0.5s ease-in-out 0s;
+  -moz-transition: all 0.5s ease-in-out 0s;
+  -ms-transition: all 0.5s ease-in-out 0s;
+  -o-transition: all 0.5s ease-in-out 0s;
+  transition: all 0.5s ease-in-out 0s;
   -webkit-transition-timing-function: cubic-bezier(0.59, 0.005, 0, 1);
   /* older webkit */
   -webkit-transition-timing-function: cubic-bezier(0.59, 0.005, 0, 1);
@@ -422,27 +418,14 @@ h1 span {
   transition-timing-function: cubic-bezier(0.59, 0.005, 0, 1);
   /* custom */
   z-index: -1;
-}
-h1 span:after {
-  content: '';
-  width: 0;
-  height: 0;
-  border-left: 7.5px solid transparent;
-  border-right: 7.5px solid transparent;
-  border-top: 7px solid #FAFAFA;
-  position: absolute;
-  bottom: -7px;
-  margin-left: -7.5px;
-  left: 50%;
+  line-height: 1em;
 }
 h1:hover span {
   opacity: 1;
-  -moz-transform: translateY(0) scaleY(1) scaleX(1);
-  -ms-transform: translateY(0) scaleY(1) scaleX(1);
-  -webkit-transform: translateY(0) scaleY(1) scaleX(1);
-  transform: translateY(0) scaleY(1) scaleX(1);
-  -webkit-animation: bounceUp 1000ms linear both;
-  animation: bounceUp 1000ms linear both;
+  -moz-transform: translateY(0) scale(1);
+  -ms-transform: translateY(0) scale(1);
+  -webkit-transform: translateY(0) scale(1);
+  transform: translateY(0) scale(1);
 }
 
 h2 {
